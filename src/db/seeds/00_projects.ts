@@ -5,7 +5,6 @@ export async function seed(knex: Knex): Promise<void> {
 
   await knex("projects").insert([
     {
-      id: 1,
       name: "Daltfresh",
       description:
         "eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper",
@@ -15,7 +14,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2020-09-28 00:43:32",
     },
     {
-      id: 2,
       name: "Y-Solowarm",
       description:
         "libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede",
@@ -25,7 +23,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-10-16 02:42:23",
     },
     {
-      id: 3,
       name: "Duobam",
       description:
         "a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
@@ -35,7 +32,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 4,
       name: "Mat Lam Tam",
       description:
         "ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in",
@@ -45,7 +41,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-08-18 20:44:49",
     },
     {
-      id: 5,
       name: "Tampflex",
       description:
         "erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum",
@@ -55,7 +50,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 6,
       name: "Prodder",
       description:
         "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis",
@@ -65,7 +59,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2020-11-09 18:45:38",
     },
     {
-      id: 7,
       name: "Keylex",
       description:
         "aliquam non mauris morbi non lectus aliquam sit amet diam in",
@@ -75,7 +68,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 8,
       name: "Flowdesk",
       description:
         "a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo",
@@ -85,7 +77,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 9,
       name: "Tin",
       description:
         "pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in",
@@ -95,7 +86,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 10,
       name: "Home Ing",
       description:
         "justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor",
@@ -105,7 +95,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-11-27 16:22:34",
     },
     {
-      id: 11,
       name: "Stringtough",
       description:
         "at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum",
@@ -115,7 +104,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2020-12-20 03:29:06",
     },
     {
-      id: 12,
       name: "Voltsillam",
       description:
         "luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie",
@@ -125,7 +113,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-03-15 16:29:58",
     },
     {
-      id: 13,
       name: "Zontrax",
       description:
         "non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor",
@@ -135,7 +122,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-03-30 12:00:02",
     },
     {
-      id: 14,
       name: "Lotstring",
       description:
         "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
@@ -145,7 +131,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 15,
       name: "Fintone",
       description:
         "ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam",
@@ -155,7 +140,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 16,
       name: "Tresom",
       description:
         "vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem",
@@ -165,7 +149,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-09-30 23:01:36",
     },
     {
-      id: 17,
       name: "Pannier",
       description:
         "eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
@@ -175,7 +158,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 18,
       name: "It",
       description:
         "dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in",
@@ -185,7 +167,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: "2021-07-14 00:51:48",
     },
     {
-      id: 19,
       name: "Latlux",
       description:
         "leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
@@ -195,7 +176,6 @@ export async function seed(knex: Knex): Promise<void> {
       end_date: null,
     },
     {
-      id: 20,
       name: "Toughjoyfax",
       description:
         "aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien",

@@ -14,6 +14,8 @@ projectRouter.use(
 projectRouter
   .route("/:projectId([0-9]+)")
   .get(ProjectController.read)
+  .put(ProjectController.update)
+  .delete(ProjectController.delete)
   .all(methodNotAllowed);
 
 projectRouter

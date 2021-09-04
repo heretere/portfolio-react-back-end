@@ -22,8 +22,6 @@ const validateProperties =
 
       if (conversion === undefined) return true;
 
-      console.log(k, ":", conversion);
-
       res.locals[objectName][k] = conversion;
     });
 

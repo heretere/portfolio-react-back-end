@@ -28,9 +28,20 @@ const read = (_: Request, res: Response) =>
   res.json({ data: res.locals.projectId });
 
 const create = (_: Request, res: Response, next: NextFunction) => {
-  console.log(res.locals.createdProject);
   ProjectService.create(res.locals.createdProject)
     .then((data) => res.status(201).json({ data }))
+    .catch((e) => next(ErrorResponse.createErrorResponseFromError(e)));
+};
+
+const update = (_: Request, res: Response, next: NextFunction) => {
+  ProjectService.update(res.locals.updatedProject)
+    .then((data) => res.json({ data }))
+    .catch((e) => next(ErrorResponse.createErrorResponseFromError(e)));
+};
+
+const destroy = (_: Request, res: Response, next: NextFunction) => {
+  ProjectService.delete(Number(res.locals.projectId.id))
+    .then((data) => res.json({ data }))
     .catch((e) => next(ErrorResponse.createErrorResponseFromError(e)));
 };
 
@@ -41,5 +52,11 @@ export default {
     ValidateProperties(validProperties, "createdProject", false),
     create,
   ],
+  update: [
+    projectExists,
+    ValidateProperties(validProperties, "updatedProject", true),
+    update,
+  ],
+  delete: [projectExists, destroy],
   projectExists,
 };

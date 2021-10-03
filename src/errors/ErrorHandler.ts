@@ -8,7 +8,6 @@ const errorHandler = (
   _1: NextFunction
 ) => {
   const { status = 500, message = "An error occurred" } = error;
-
   return res.status(status).json({ error: message });
 };
 

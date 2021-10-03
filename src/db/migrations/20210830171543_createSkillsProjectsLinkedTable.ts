@@ -7,6 +7,7 @@ export async function up(knex: Knex): Promise<void> {
       .foreign("skill_id")
       .references("id")
       .inTable("skills")
+      .onUpdate("CASCADE")
       .onDelete("CASCADE");
 
     table.integer("project_id").notNullable();
@@ -14,6 +15,7 @@ export async function up(knex: Knex): Promise<void> {
       .foreign("project_id")
       .references("id")
       .inTable("projects")
+      .onUpdate("CASCADE")
       .onDelete("CASCADE");
 
     table.primary(["skill_id", "project_id"]);

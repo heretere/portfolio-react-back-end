@@ -3,6 +3,7 @@ import ProjectService from "./ProjectService";
 import ErrorResponse from "../errors/ErrorResponse";
 import itemExists from "../middleware/ItemExists";
 import ValidateProperties, { Property } from "../middleware/ValidateProperties";
+import ValidatePassword from "../middleware/ValidatePassword";
 
 const validProperties = [
   new Property("name", (name) => name),
@@ -49,14 +50,16 @@ export default {
   list,
   read: [projectExists, read],
   create: [
+    ValidatePassword,
     ValidateProperties(validProperties, "createdProject", false),
     create,
   ],
   update: [
+    ValidatePassword,
     projectExists,
     ValidateProperties(validProperties, "updatedProject", true),
     update,
   ],
-  delete: [projectExists, destroy],
+  delete: [ValidatePassword, projectExists, destroy],
   projectExists,
 };

@@ -18,7 +18,24 @@ const list = (projectId?: number) => {
 const read = (id: number, project_id?: number) =>
   list(project_id).where("s.id", id).first();
 
+const create = (skill: Object) =>
+  knex(TABLE_NAME)
+    .insert(skill)
+    .returning("*")
+    .then((columns) => columns[0]);
+
+const update = (skill: Object) =>
+  knex(TABLE_NAME)
+    .update(skill)
+    .returning("*")
+    .then((columns) => columns[0]);
+
+const destroy = (id: number) => knex(TABLE_NAME).where("id", id).del();
+
 export default {
   list,
   read,
+  create,
+  update,
+  delete: destroy,
 };
